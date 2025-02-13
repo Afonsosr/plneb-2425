@@ -10,7 +10,7 @@ def reverse(s):
 
 
 # 2) 
-
+# 2.1)
 # opção mais simples
 
 def procura_aA(s):
@@ -21,6 +21,7 @@ def procura_aA(s):
             c += 1
     return c
 
+# 2.2)
 # outra opção
 
 def procura_aA_2(s):
@@ -89,7 +90,7 @@ def verificacao_caracteres(s1,s2):
 
 
 # 8)
-
+# 8.1)
 # opcao por letras
 
 def ocorrencias1(s1,s2):
@@ -111,6 +112,7 @@ def ocorrencias1(s1,s2):
          
     return cont
 
+# 8.2)
 # opcao por expressões
 
 def ocorrencias2(s1,s2):
