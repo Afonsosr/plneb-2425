@@ -1,4 +1,4 @@
-# TPC1 - Afonso Rodeigurs, PG55831
+# TPC1 - Afonso Rodrigues, PG55831
 
 ## 1. reverse()
 **Descrição:** Recebe uma string e retorna, como output, a sua leitura inversa.
