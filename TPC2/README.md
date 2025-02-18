@@ -1,4 +1,4 @@
-# TPC1 - Afonso Rodeigurs, PG55831
+# TPC2 - Afonso Rodrigues, PG55831
 
 ## 1.1. hello_inicio()
 **Descrição:** Função que determina se a palavra "hello" aparece no início da string input.
