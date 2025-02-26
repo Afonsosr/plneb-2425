@@ -20,12 +20,6 @@ for c in conceitos_texto:
     
     conceitos_list.append(elem)
 
-for c in conceitos_texto:
-    conceito = re.split(r"\n",c)
-    elem = [conceito[0],""]
-
-
-# print(conceitos_list)
 
 # gerar html
 
