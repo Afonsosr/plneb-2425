@@ -11,6 +11,15 @@ Inicialmente, o ficheiro é aberto e lido integralmente. Após isso, o primeiro 
 
 
 ```python
+
+```
+
+## Organização e remoção de quebras de linha
+
+Após isto, é criada uma lista de conceitos. Cada um dos elementos será, também, uma lista na forma [conceito,descrição] e, para isso, ainda há processamentos a serem executados em cada um dos conceitos. Em primeiro lugar, há uma iteração pelas descrições dos vários conceitos, em que o objetivo é eliminar quebras de linha ("\n") que estejam presentes. É também feita, em cada conceito, a separação entre o termo relativo ao conceito e a sua descrição.
+
+
+```python
 conceitos_texto = re.split(r"\n\n@",texto)
 
 conceitos_list = []
@@ -21,14 +30,6 @@ for c in conceitos_texto:
         elem[1] = elem[1] + str(" ") + f
     
     conceitos_list.append(elem)
-```
-
-## Organização e remoção de quebras de linha
-
-Após isto, é criada uma lista de conceitos. Cada um dos elementos será, também, uma lista na forma [conceito,descrição] e, para isso, ainda há processamentos a serem executados em cada um dos conceitos. Em primeiro lugar, há uma iteração pelas descrições dos vários conceitos, em que o objetivo é eliminar quebras de linha ("\n") que estejam presentes. É também feita, em cada conceito, a separação entre o termo relativo ao conceito e a sua descrição.
-
-
-```python
 ```
 
 ## Criação de ficheiro ".html"
@@ -78,7 +79,3 @@ Por último, ambos os ficheiros são fechados (tanto o ficheiro ".txt" inicial c
 f_out.close()
 file.close()
 ```
-
-
-
-
