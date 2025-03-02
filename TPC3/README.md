@@ -11,7 +11,8 @@ Inicialmente, o ficheiro é aberto e lido integralmente. Após isso, o primeiro 
 
 
 ```python
-
+texto = re.sub(r"\n\n\f","\n\n",texto)
+texto = re.sub(r"\n\n","\n\n@",texto)
 ```
 
 ## Organização e remoção de quebras de linha
