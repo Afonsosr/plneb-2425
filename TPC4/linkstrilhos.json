@@ -1,0 +1,64 @@
+{
+    "trilhos": [
+        {
+            "nome": "Percurso da cabra-montês",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/percurso-cabra-montes?locale=pt"
+        },
+        {
+            "nome": "PR10 TBR Trilho da Preguiça - Ecologia do Carvalhal",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-preguica-ecologia-carvalhal?locale=pt"
+        },
+        {
+            "nome": "PR11 TBR Trilho das Silhas dos Ursos",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-silhas-ursos?locale=pt"
+        },
+        {
+            "nome": "PR14 TBR Trilho do Sobreiral da Ermida do Gerês",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-sobreiral-ermida-geres?locale=pt"
+        },
+        {
+            "nome": "PR1 TBR Trilho da Cidade da Calcedónia",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/pr1-tbr-trilho-cidade-calcedonia?locale=pt"
+        },
+        {
+            "nome": "PR3 MLG Trilho Castrejo",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/pr3-mlg-trilho-castrejo?locale=pt"
+        },
+        {
+            "nome": "PR3 TBR Trilho dos Currais",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-currais?locale=pt"
+        },
+        {
+            "nome": "PR5 MLG Trilho do Megalitismo do Planalto de Castro Laboreiro",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-megalitismo-planalto-castro-laboreiro?locale=pt"
+        },
+        {
+            "nome": "PR5 TBR Trilho da Águia do Sarilhão",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-da-aguia-do-sarilhao?locale=pt"
+        },
+        {
+            "nome": "Rota da Pré-história do Parque Nacional da Peneda-Gerês",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/rota-pre-historia-parque-nacional-peneda-geres?locale=pt"
+        },
+        {
+            "nome": "Trilho da Peneda",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-peneda?locale=pt"
+        },
+        {
+            "nome": "Trilho de Tourém",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-tourem?locale=pt"
+        },
+        {
+            "nome": "Trilho do Fojo da Portela da Fairra",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-fojo-portela-fairra?locale=pt"
+        },
+        {
+            "nome": "Trilho Interpretativo de Castro Laboreiro",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-interpretativo-castro-laboreiro?locale=pt"
+        },
+        {
+            "nome": "Trilho Interpretativo do Mezio",
+            "url": "https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/trilho-interpretativo-mezio?locale=pt"
+        }
+    ]
+}
