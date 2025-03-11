@@ -39,7 +39,7 @@ No body, foi inserido o conjunto de trilhos marcados existentes por todo o parqu
 Além disso, foi criado um dicionário de termos característicos desta Serra (desde expressões até fauna e flora) para que, nos vários parágrafos, seja possível percebermos melhor o que significam alguns destes conceitos. Quando passamos o cursor por uma das palavras a negrito, aparecerá uma descrição desta.
 
 
-# Exemplo de trilho:
+### Exemplo de trilho:
 ```python
 <h3 style="color:#006400;">Percurso da cabra-montês</h3>
                                 <a href="https://natural.pt/protected-areas/parque-nacional-peneda-geres/pathways/percurso-cabra-montes?locale=pt" target="_blank">
