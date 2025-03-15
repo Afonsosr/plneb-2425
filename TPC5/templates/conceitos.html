@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
 
 
+
 {% block head %}
 <title>{{title}}</title>
 {% endblock%}
@@ -13,7 +14,9 @@
     {% for designacao in designacoes %}
 
         <li>
-            {{designacao}}
+            <a href="/conceitos/{{designacao}}" target="_blank" title="{{ db[designacao] }}">
+                {{designacao}}
+            </a>
         </li>
 
     {% endfor %}
@@ -21,3 +24,5 @@
 </ul>
 
 {% endblock %}
+
+
