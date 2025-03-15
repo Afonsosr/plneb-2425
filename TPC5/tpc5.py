@@ -15,14 +15,13 @@ def hell_world():
 @app.route("/conceitos")
 def conceitos():
     designacoes = list(db.keys())
-    return render_template("conceitos.html", designacoes=designacoes, title="Lista de Conceitos")
+    return render_template("conceitos.html", designacoes=designacoes, title="Lista de Conceitos",db=db)
 
 
 
 @app.route("/api/conceitos")
 def api_conceitos():
     return db
-
 
 
 
@@ -40,8 +39,10 @@ def adicionar_conceitos():
 
 @app.route("/conceitos/<designacao>")
 def api_conceito(designacao):
-    if designacao in db:
-        return render_template("conceitos.html", designacao=designacao, descricao=db[designacao], title="Conceito")
+    if designacao in db:        
+        return render_template("conceito_unico.html", designacao=designacao, descricao=db[designacao], title="Conceito",db=db)
+
+
 
 
 app.run(host="localhost", port=4002, debug=True)
