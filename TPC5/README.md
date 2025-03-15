@@ -4,6 +4,8 @@
 
 Este trabalho de casa tem como objetivo a criação de um percurso entre ficheiros html, partindo de uma lista de conceitos. O objetivo é que, em cada conceito, seja possível criar uma hiperligaão para uma página individual onde aparecerá a descrição do termo em questão.
 
+Abaixo, serão apenas descritos os trabalhos feitos no sentido de realizar o que foi pedido, ou seja, a criação de rotas entre ficheiros html para páginas individuais de conceitos e não todo o trabalho executado durante a aula em conjunto com os professores.
+
 ## conceito_unico.html
 
 Foi criado um ficheiro conceito_unico.html, que será o responsável pelo layout da página individual de cada termo. Este, apresentará como título a designação em questão, seguida da sua descrição.
