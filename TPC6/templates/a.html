@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+
+<title> Caixa de Pesquisa </title>
+
+{% endblock %}
+
+{% block body %}
+
+
+<div class="px-4 py-5 my-5 text-center">
+    
+    
+    <div class="col-lg-6 mx-auto">
+    <h1 class="display-5 fw-bold text-body-emphasis">Menu de Pesquisa</h1>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <form action="/pesquisar" method="get">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Texto a pesquisar" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>
+        </form>
+      </div>
+
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{designacao}}</h5>
+          <p class="card-text">{{db[designacao]}}</p>
+          <a href="https://pt.wikipedia.org/wiki/" class="card-link">Saber mais</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<!--<div class="input-group mb-3">-->
+
+  <!--</div>-->
+
+
+{% endblock %}
