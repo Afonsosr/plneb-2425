@@ -10,6 +10,8 @@ Para a realização deste trabalho, foi utilizado como auxílio o DeepSeek.
 
 O ficheiro pesquisar.html é o responsável pela idealização da página de pesquisa por termo. Tem uma barra de pesquisa onde o termo é colocado e, após carregar no botão "Pesquisar", caso o termo esteja presente em algum par designação/descrição da base de dados, irá aparecer um conjunto de "cards" com essa informação, acompanhada de 2 links que redirecionarão para a página de Wikipédia e Priberam da designação. Caso o termo não esteja presente na base de dados, aparecerá uma mensagem indicando que não há resultados disponveis para o termo pesquisado.
 
+![Descrição da imagem](caminho/para/imagem.png)
+
 ## @app.route("/pesquisar", methods=["GET"])
  Aqui, é criada a rota para a página pesquisar.html. O processamento do termo é feito e, caso este esteja presente da forma acima explicada, há um return de toda essa informação. O método utilizado é o "GET".
 
