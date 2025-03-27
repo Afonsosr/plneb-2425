@@ -57,10 +57,17 @@ De notar que caso o utilizador clique no conceito ou designação desejada, é r
 </table>
 
 
-
 {% endblock %}
+```
 
+## @app.get("/conceitos/tabela")
 
+Aqui, vemos a inicialização da rota que levará à página da tabela (tabela.html), no ficheiro tpc7.py.
+
+```python
+@app.get("/conceitos/tabela")
+def conceitos_tabela():
+    return render_template("tabela.html",db=db)
 ```
 
 
