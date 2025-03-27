@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+
+
+{% block head %}
+<title>{{title}}</title>
+{% endblock%}
+
+
+{% block body %}
+
+
+<form action="/conceitos" method="POST">  <!-- Aqui decidiome o que queremos fazer com a informação recebida no formulário, e onde queremos guardar a informação -->
+    <div class="mb-3">
+        <label for="designacao_input" class="form-label">Designação</label>
+        <input type="text" class="form-control" id="designacao_input" name="designacao">
+    
+    </div>
+    <div class="mb-3">
+        <label for="descricao_input" class="form-label">Descrição</label>
+        <input type="text" class="form-control" id="descricao_input" name="descricao">
+        
+        </div>
+    <button type="submit" class="btn btn-primary">Submeter</button>
+</form>
+
+<div class="list-group">
+
+    {% for designacao in designacoes %}
+        <a href="/conceitos/{{designacao}}" class="list-group-item list-group-item-action">{{designacao}}</a>                
+    {% endfor %}
+
+</div>
+
+
+
+
+
+{% endblock %}
+
+

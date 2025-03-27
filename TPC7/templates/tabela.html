@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <title> Tabela </title>    <!-- Isto é o nome da página que aparece em cima no separador-->
+{% endblock %}
+
+{% block body %}
+
+<table id="tabela_conceitos" class="table table-bordered table-striped">
+    
+    <thead>
+        <tr>
+            <th scope="col">Conceitos</th>
+            <th scope="col">Descrições</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for designacao, descricao in db.items() %}
+        <tr>
+            <!--<td>{{designacao}}</td>-->
+            <td><a href="/conceitos/{{designacao}}" class="list-group-item list-group-item-action">{{designacao}}</a></td>
+            <!--<td>{{descricao}}</td>-->
+            <td><a href="/conceitos/{{designacao}}" class="list-group-item list-group-item-action">{{descricao}}</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
