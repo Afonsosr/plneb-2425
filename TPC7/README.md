@@ -70,5 +70,28 @@ def conceitos_tabela():
     return render_template("tabela.html",db=db)
 ```
 
+## layout.html
+
+No ficheiro layout.html é feito o import do script em javascript referente aos templates de tabela do DataTable.
+
+```html
+<script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
+```
+
+Tabém é adicionado, no navegador, um botão com ligação para a página da tabela.
+
+```python
+<a class="nav-link" href="/conceitos/tabela">Tabela</a>
+```
+
+## home.html
+
+Foi adicionada à página home.html um botão com acesso direto à tabela. 
+
+```html
+<a href="/conceitos/tabela" class="btn btn-outline-secondary btn-lg px-4">Tabela</a>
+```
+
+
 
 
