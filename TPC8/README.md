@@ -38,13 +38,43 @@ Nota: Todo este processo acontece de forma iterativa.
 Após isso, são pesquisadas as ocorrências de "h2","p" e "ul", que são, após análise, os vários tipos de elementos presentes e necessários para este trabalho no conteúdo de cada uma das doenças.
 
 - **`<h2>`** → Títulos de subsecções
+```python
+if conteudo_div.name == "h2":
+   if tex:
+       info.append((titu,tex.strip()))
+   strong_tag = conteudo_div.find("strong")
+   titu = strong_tag.text.strip() if strong_tag else "Untitled"
+   tex = ""
+```
 - **`<p>`** → Parágrafos de texto
+```python
+elif conteudo_div.name == "p":
+   tex += conteudo_div.text.strip() + " "
+```
 - **`<ul>`** → Listas (ex.: sintomas, conjuntos de fatores)
+```python
+elif conteudo_div.name == "ul":
+   list_items = [li.get_text(strip=True) for li in conteudo_div.find_all("li")]
+   tex += ", ".join(list_items) + " "
+```
+
 
 Depois de encontrados, cada uma das informações é colocada no devido local, associado ao respetivo subtítulo na forma de tuplo. Este tuplo é adicionado à lista info.
 
+```python
+info.append((titu,tex.strip()))
+```
+
 A lista, por fim, é convertida para dicionário, o campo "content" é apagado e substituído pelos campos criados, e toda esta informação é escrita num novo ficheiro doencas_tpc.json, abaixo explicado.
 
+```python
+    del db[elem]["content"]
+    d_info = dict(info)
+    db[elem].update(d_info)
+a = open("doencas_tpc.json","w",encoding="utf-8")
+json.dump(db,a,indent=4,ensure_ascii=False)
+a.close()
+```
 
 ## doencas_tpc.json
 
