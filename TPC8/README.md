@@ -20,5 +20,52 @@ Abaixo, é apresentado o exemplo de um dos conceitos presente neste ficheiro:
 
 ## tpc8.py
 
+Inicialmente são feitos os imports das bibliotecas necessárias e, depois, é feita a abertura e load do ficheiro "doencas__.json"
+
+```python
+from bs4 import BeautifulSoup
+import json
+
+db_file = open("doencas__.json",encoding="utf-8")
+db = json.load(db_file)
+db_file.close()
+```
+
+Nota: Todo este processo acontece de forma iterativa.
+
+É feito o parse, pela biblioteca BeautifulSoup, do conteúdo que é value da key "content", dentro do elemento.
+
+Após isso, são pesquisadas as ocorrências de "h2","p" e "ul", que são, após análise, os vários tipos de elementos presentes e necessários para este trabalho no conteúdo de cada uma das doenças.
+
+- **`<h2>`** → Títulos de subsecções
+- **`<p>`** → Parágrafos de texto
+- **`<ul>`** → Listas (ex.: sintomas, conjuntos de fatores)
+
+O "h2" corresponde a títulos de subsecções do conteúdo.
+O "p" corresponde a parágrafos de texto.
+O "ul" corresponde a listas (por exemplo de sintomas ou conjuntos de fatores).
+
+
+
+
+
+
+
+
 ## doencas_tpc.json
+
+Ficheiro final com todas as informações devidamente tratadas e associadas a cada um dos conceitos.
+
+```json
+"Acne": {
+        "url": "https://www.atlasdasaude.pt/acne-causas-sintomas-diagnostico-tratamento",
+        "resumo": "Atinge cerca de 80% da população com idade compreendida entre os 12 e os 24 anos, pelo que se pode dizer que esta é a doença inflamatória da pele mais frequente em todo o mundo.",
+        "Intro": "Atinge cerca de 80% da população com idade compreendida entre os 12 e os 24 anos, pelo que se pode dizer que esta é a doença inflamatória da pele mais frequente em todo o mundo. Caracterizada por um processo inflamatório que resulta da produção excessiva de sebo pelas glândulas sebáceas, esta afeta sobretudo o sexo feminino. Pode ainda surgir na infância – entre os 1 a 7 anos de idade -, o que pode querer indicar algum problema subjacente, como é o caso da puberdade precoce. Por outro lado, também a mulher adulta pode ter acne (depois dos 25 anos, mantendo-se até aos 40 ou mais anos), na maioria dos casos persistindo desde a adolescência ou então surgindo “de novo” nessa fase da vida.",
+        "Acne na adolescência": "A acne na adolescência pode afetar a face e o tronco (ombros, zona V do decote e dorso), é mais precoce nas mulheres, mas mais grave nos homens. Caracteriza-se pela presença de hiperseborreia, comedões abertos e fechados (“pontos negros” e “pontos brancos”) e lesões inflamatórias (pápulas, pústulas, nódulos, quistos). Acne na idade adulta A acne na mulher adulta atinge a metade inferior do rosto e o pescoço, com lesões inflamatórias características. Com maior frequência, nesta faixa etária, há manipulação das lesões, o que acarreta cicatrizes hiperpigmentadas (acastanhadas). Nesta fase da vida, os fatores que contribuem para a acne são diversos, pelo que a resposta ao tratamento é mais demorada, podendo ser necessário manter um cuidado “preventivo” ao longo da vida.",
+        "Causas": "As alterações hormonais são apontadas como as principais responsáveis pelo aparecimento da acne. As hormonas envolvidas neste processo são os “andrógenos”, com ação sobre as glândulas de gordura da pele, em determinadas localizações – face, tronco, couro cabeludo. Elas atuam aumentando a produção de sebo na pele e contribuindo para a condição de “hiperseborreia” que, associada a outros fatores, como a proliferação de bactérias, inflamação ou alterações no processo de queratinização da pele, conduzem ao aparecimento das lesões iniciais de acne – os comedões (vulgarmente designados por “pontos negros” ou “pontos brancos”). Quanto maior a inflamação que se observa, mais graves são as suas manifestações. O stress é, no entanto, outro dos fatores que pode estar na sua origem (já que promove uma maior atividade das glândulas sebáceas) ou agravá-la, uma vez que aumenta a tendência do indivíduo para espremer ou coçar borbulhas. Ao contrário do que se possa pensar, chocolates, azeitonas, marisco, gorduras ou bolos não são responsáveis por esta doença cutânea.",
+        "Sintomas": "Pontos negros, Pontos brancos, Pápulas, Pústulas, Nódulos, Quistos",
+        "Diagnóstico": "O diagnóstico da acne é feito após exame da pele. Neste, os médicos procuram determinados sintomas, como cravos ou comedões, para determinar se a pessoa tem acne e não outra doença de pele, como rosácea. Após o diagnóstico, e com base no número e tipo de lesões, a acne é definida como: leve, moderada e grave.",
+        "Tratamento": "O seu tratamento vai depender da gravidade da doença. No entanto, este permite reduzir a inflamação tornando a pele mais saudável. Podem ser utilizados cremes, géis, sabonetes e antibióticos para controlar a proliferação bacteriana, de aplicação tópica (diretamente na zona afetada), ou, em situações mais graves, medicação oral. O dermatologista pode ainda recomendar outros tratamentos complementares como a extração de comedões, punção ou drenagem de pústulas, nódulos e quistos. Peeling, laser ou dermobrasão podem ser necessários para o tratamento de marcas associadas às lesões provocadas pela acne. Quanto às manchas, estas podem ser tratadas em casa com recurso a cremes ou em consultório com recurso a fototerapia de luz azul."
+    }
+```
  
