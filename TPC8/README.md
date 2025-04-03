@@ -41,15 +41,9 @@ Após isso, são pesquisadas as ocorrências de "h2","p" e "ul", que são, após
 - **`<p>`** → Parágrafos de texto
 - **`<ul>`** → Listas (ex.: sintomas, conjuntos de fatores)
 
-O "h2" corresponde a títulos de subsecções do conteúdo.
-O "p" corresponde a parágrafos de texto.
-O "ul" corresponde a listas (por exemplo de sintomas ou conjuntos de fatores).
+Depois de encontrados, cada uma das informações é colocada no devido local, associado ao respetivo subtítulo na forma de tuplo. Este tuplo é adicionado à lista info.
 
-
-
-
-
-
+A lista, por fim, é convertida para dicionário, o campo "content" é apagado e substituído pelos campos criados, e toda esta informação é escrita num novo ficheiro doencas_tpc.json, abaixo explicado.
 
 
 ## doencas_tpc.json
