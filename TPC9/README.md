@@ -16,5 +16,5 @@ Este trabalho tem como principal objetivo a análise do texto de um livro do Har
 
 ## Tensorflow - nuvem de conceitos
 
-<img src="abertura_geres.jpg">
+<img src="nuvem.png">
 
