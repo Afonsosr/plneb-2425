@@ -178,7 +178,7 @@ display_pca_scatterplot(model_wv.wv,palavras)
 palavras2 =  ['hogwarts','escola','varinha','magia','grifinória','sirius','draco','malfoy', 'snape', 'mcgonagall','harry', 'rony', 'hermione', 'dumbledore','hagrid']
 display_pca_scatterplot(model_wv.wv,palavras2)
 ```
-No notebook é possível ver a representação gráfica de ambas as listas de conceitos.
+No notebook é possível ver a representação gráfica de ambas as listas de palavras.
 
 ## Tensorflow - nuvem de conceitos
 
