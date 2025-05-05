@@ -73,6 +73,21 @@ model_wv.wv.most_similar('hagrid')
  ('rouba', 0.29159069061279297)]
 ```
 
+De seguida, foi testada a similaridade entre pares de termos. Par aisto, tentei pensar em termos que pudessem estar associados de uma forma mais próxima, tanto pelo contexto de toda a saga como do livro em questão, de uma forma mais específica. Os resultados obtidos foram os seguintes:
+
+```python
+print(model_wv.wv.similarity("harry","voldemort"))
+print(model_wv.wv.similarity("filosofal","harry"))
+print(model_wv.wv.similarity("hagrid","hermione"))
+print(model_wv.wv.similarity("harry","snape"))
+```
+```txt
+0.13185275
+0.12981871
+0.035221413
+-0.0152964955
+```
+
 ## Intruso
 
 ## Analogias
