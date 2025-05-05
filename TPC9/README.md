@@ -36,9 +36,42 @@ def get_word(word):
         print("The word '"+word+"' does not appear in this model")
 ```
 
-## Saving and Coding
-
 ## Similaridade
+
+Foi testada a similaridade entre as várias palavras que aparecem no livro. Começou-se por analisar o estudo do conjunto de palavras "mais próximas"/"com maior associação" ao termo de input. Foram testadas as palavras 'leviosa' e 'hagrid'. Abaixo estão, respetivamente, apresentados os outputs de cada uma das pesquisas
+
+```python
+model_wv.wv.most_similar('leviosa')
+```
+```python
+[('fantochinho', 0.3471190333366394),
+ ('substituindo', 0.3336864113807678),
+ ('precisaremos', 0.3290361762046814),
+ ('formos', 0.32050657272338867),
+ ('mundo', 0.31179478764533997),
+ ('dias', 0.3085697889328003),
+ ('chorando', 0.30578887462615967),
+ ('perto', 0.30517101287841797),
+ ('poderes', 0.29699182510375977),
+ ('acidentara', 0.2967570424079895)]
+```
+
+
+```python
+model_wv.wv.most_similar('hagrid')
+```
+```python
+[('edwiges', 0.3439558148384094),
+ ('espalhar', 0.33714985847473145),
+ ('piscaram', 0.3369746208190918),
+ ('desengonçado', 0.3322811424732208),
+ ('apanhando', 0.32884615659713745),
+ ('meia', 0.3226913511753082),
+ ('chapinhava', 0.31663644313812256),
+ ('harry', 0.3039996922016144),
+ ('training', 0.291799932718277),
+ ('rouba', 0.29159069061279297)]
+```
 
 ## Intruso
 
