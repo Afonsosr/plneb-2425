@@ -40,10 +40,12 @@ def get_word(word):
 
 Foi testada a similaridade entre as várias palavras que aparecem no livro. Começou-se por analisar o estudo do conjunto de palavras "mais próximas"/"com maior associação" ao termo de input. Foram testadas as palavras 'leviosa' e 'hagrid'. Abaixo estão, respetivamente, apresentados os outputs de cada uma das pesquisas
 
+Input:
 ```python
 model_wv.wv.most_similar('leviosa')
 ```
-```python
+Output:
+```txt
 [('fantochinho', 0.3471190333366394),
  ('substituindo', 0.3336864113807678),
  ('precisaremos', 0.3290361762046814),
@@ -56,11 +58,12 @@ model_wv.wv.most_similar('leviosa')
  ('acidentara', 0.2967570424079895)]
 ```
 
-
+Input:
 ```python
 model_wv.wv.most_similar('hagrid')
 ```
-```python
+Output:
+```txt
 [('edwiges', 0.3439558148384094),
  ('espalhar', 0.33714985847473145),
  ('piscaram', 0.3369746208190918),
@@ -75,12 +78,14 @@ model_wv.wv.most_similar('hagrid')
 
 De seguida, foi testada a similaridade entre pares de termos. Par aisto, tentei pensar em termos que pudessem estar associados de uma forma mais próxima, tanto pelo contexto de toda a saga como do livro em questão, de uma forma mais específica. Os resultados obtidos foram os seguintes:
 
+Input:
 ```python
 print(model_wv.wv.similarity("harry","voldemort"))
 print(model_wv.wv.similarity("filosofal","harry"))
 print(model_wv.wv.similarity("hagrid","hermione"))
 print(model_wv.wv.similarity("harry","snape"))
 ```
+Output:
 ```txt
 0.13185275
 0.12981871
@@ -90,9 +95,35 @@ print(model_wv.wv.similarity("harry","snape"))
 
 ## Intruso
 
+De uma lista de conceitos, queriamos agora saber qual é o termo intruso. Foram feitos alguns testes. 
+
+Input:
+```python
+model_wv.wv.doesnt_match(["harry","rony","hermione"])
+```
+Output:
+```txt
+'hermione'
+```
+
+Aqui, por exemplo, o intruso corresponder a 'hermione' deve-se, provavelmente, ao caso de este ser um nome feminino, enquanto que o nome 'harry' e 'rony' correspondem a nomes masculinos.
+
+Input:
+```python
+model_wv.wv.doesnt_match(["draco","harry","hermione","rony"])
+```
+Output:
+```txt
+'draco'
+```
+
+Já neste caso, a exclusão de 'draco' pode-se dever mais ao contexto da própria história e à relação entre as personagens. Como se sabe, o Draco (Slytherin) faz parte de uma "casa" diferente das de Harry, Ron e Hermione (Gryffindor), ou seja, também não faz parte do núcleo de amigos de Harry, visto até como um opositor/inimigo ao grupo de amigos. 
+
 ## Analogias
 
 ## Tensorflow - nuvem de conceitos
+
+Abaixo está representada a nuvem de conceitos obtida no tensorflow, be
 
 <img src="nuvem.png">
 
