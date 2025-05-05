@@ -121,9 +121,29 @@ Já neste caso, a exclusão de 'draco' pode-se dever mais ao contexto da própri
 
 ## Analogias
 
+O estudo de analogias permite ver relações/possíveis sinónimos que podem ser inferidos a partir de conjuntos de palavras. Apesar de alguns dos conceitos testados terem retornado palavras menos óbvias, ou descontextualizadas, houve um conjunto de termos que retornou algo interessante:
+
+Input:
+```python
+def analogy( x2, y1, x1):
+    result = model_wv.wv.most_similar(positive=[y1, x2], negative=[x1])
+    return result[0][0]
+
+analogy('harry', 'rony', 'hagrid')
+```
+Output:
+```txt
+'seguidores'
+```
+
+O modelo, aqui, é capaz de reconhecer/identificar Harry e Ron como "seguidores" de Hagrid, uma personagem muito próxima de ambos e que tanto lhes ensina ao longo de todos os livros.
+
+
+
+
 ## Tensorflow - nuvem de conceitos
 
-Abaixo está representada a nuvem de conceitos obtida no tensorflow, be
+Abaixo está representada a nuvem de conceitos obtida no tensorflow, bem como o conjunto de palavras mais próximas a 'harry'.
 
 <img src="nuvem.png">
 
