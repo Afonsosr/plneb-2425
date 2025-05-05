@@ -138,8 +138,47 @@ Output:
 
 O modelo, aqui, é capaz de reconhecer/identificar Harry e Ron como "seguidores" de Hagrid, uma personagem muito próxima de ambos e que tanto lhes ensina ao longo de todos os livros.
 
+## Visualização gráfica
 
+Foi analisado um conjunto de palavras com recurso a representação gráfica. É utilizada uma redução da dimensionalidade dos conceitos e é feita a sua representação. Assim, é possível ver de uma forma mais simples, a proximidade entre os vários termos presentes na lista de teste.
 
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+
+def display_pca_scatterplot(model, words=None):
+    word_vectors = []
+    valid_words = []
+
+    for w in words:
+        if w in model:
+            word_vectors.append(model[w])
+            valid_words.append(w)
+        else:
+            print(f"Aviso: '{w}' não está no vocabulário do modelo.")
+
+    word_vectors = np.array(word_vectors)
+    twodim = PCA(n_components=2).fit_transform(word_vectors)
+
+    plt.figure(figsize=(10, 10))
+    plt.scatter(twodim[:, 0], twodim[:, 1], edgecolors='k', c='skyblue', s=100)
+
+    for word, (x, y) in zip(valid_words, twodim):
+        plt.text(x, y, word, fontsize=12, ha='left', va='bottom')
+
+    plt.title("Palavras no espaço PCA (2D)", fontsize=14)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+palavras =  ['sirius','draco','malfoy', 'snape', 'mcgonagall','harry', 'rony', 'hermione', 'dumbledore','hagrid']
+display_pca_scatterplot(model_wv.wv,palavras)
+
+palavras2 =  ['hogwarts','escola','varinha','magia','grifinória','sirius','draco','malfoy', 'snape', 'mcgonagall','harry', 'rony', 'hermione', 'dumbledore','hagrid']
+display_pca_scatterplot(model_wv.wv,palavras2)
+```
+No notebook é possível ver a representação gráfica de ambas as listas de conceitos.
 
 ## Tensorflow - nuvem de conceitos
 
