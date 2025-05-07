@@ -2,5 +2,5 @@
 
 ## Introdução
 
-Este trabalho tem como objetivo a extração e formatação de informações presentes no campo "content" do ficheiro doencas__.json. 
-Todo este trabalho tem como base uma das edições da revista da Sociedade Portuguesa de Medicina Interna ([Vol. 32 No. 1 (2025): Janeiro / Março](https://revista.spmi.pt/index.php/rpmi/issue/view/135)).
+Este trabalho tem como objetivo a extração e formatação de informações, tendo como base uma das edições da revista da Sociedade Portuguesa de Medicina Interna ([Vol. 32 No. 1 (2025): Janeiro / Março](https://revista.spmi.pt/index.php/rpmi/issue/view/135)).
+
