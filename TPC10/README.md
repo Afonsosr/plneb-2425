@@ -34,3 +34,8 @@ Se algum dos campos não tiver informação, este fica em branco.
 ## Barra de Progresso
 
 De forma a que possa ser feito um acompanhamento do estado do processo em tempo real, foi adicionada uma barra de progresso que permite ver tanto qual a revista/volume que está a ser processada, bem como o artigo em análise da respetiva revista.
+
+## Armazenamento dos dados
+
+Os dados, depois de processados, são guardados num ficheiro JSON (info_artigos.json), criado para o efeito.
+
