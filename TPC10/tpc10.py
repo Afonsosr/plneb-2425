@@ -4,7 +4,7 @@ import json
 from tqdm import tqdm
 
 BASE_URL = "https://revista.spmi.pt"
-CAMINHO_ARQUIVO = "info_artigos.json"
+CAMINHO_ARQUIVO = f"info_artigos.json"
 ARTIGOS_EXTRAIDOS = []
 
 def obter_edicoes(limit=3):
