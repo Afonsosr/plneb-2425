@@ -8,7 +8,7 @@ CAMINHO_ARQUIVO = f"info_artigos.json"
 ARTIGOS_EXTRAIDOS = []
 
 def obter_edicoes(limit=3):
-    """Acessa o arquivo da revista e retorna os links das últimas edições."""
+    """Entra no arquivo da revista e retorna os links das últimas edições."""
     pagina = requests.get(f"{BASE_URL}/index.php/rpmi/issue/archive")
     soup = BeautifulSoup(pagina.text, "html.parser")
 
@@ -21,13 +21,13 @@ def obter_edicoes(limit=3):
     return edicoes
 
 def processar_edicao(edicao):
-    """Processa uma edição da revista e coleta dados de cada artigo."""
-    print(f"\n🔍 Edição: {edicao['titulo']}")
+    """Processa uma edição da revista e retira os dados de cada um dos artigos."""
+    print(f"\n Edição: {edicao['titulo']}")
     pagina = requests.get(edicao["url"])
     soup = BeautifulSoup(pagina.text, "html.parser")
     artigos = soup.find_all("div", class_="obj_article_summary")
 
-    for artigo in tqdm(artigos, desc="  Processando artigos", leave=False):
+    for artigo in tqdm(artigos, desc="  A processar artigos", leave=False):
         tag_titulo = artigo.find("h3", class_="title").find("a")
         titulo = tag_titulo.get_text(strip=True)
         url_artigo = tag_titulo["href"] if tag_titulo["href"].startswith("http") else BASE_URL + tag_titulo["href"]
@@ -58,7 +58,7 @@ def extrair_detalhes_artigo(link):
     resposta = requests.get(link)
     soup = BeautifulSoup(resposta.text, "html.parser")
 
-    # Palavras-chave
+    
     sec_keywords = soup.find("section", class_="item keywords")
     if sec_keywords:
         span = sec_keywords.find("span")
@@ -66,7 +66,7 @@ def extrair_detalhes_artigo(link):
             raw = span.get_text()
             dados["palavras_chave"] = [x.strip() for x in raw.replace("Palavras-chave:", "").split(",") if x.strip()]
 
-    # Resumo
+    
     sec_abstract = soup.find("section", class_="item abstract")
     if sec_abstract:
         for par in sec_abstract.find_all("p"):
@@ -79,14 +79,14 @@ def extrair_detalhes_artigo(link):
             else:
                 dados["resumo"]["geral"] = par.get_text(strip=True)
 
-    # DOI
+    
     sec_doi = soup.find("section", class_="item doi")
     if sec_doi:
         link_doi = sec_doi.find("a")
         if link_doi:
             dados["doi"] = link_doi["href"]
 
-    # Data de publicação
+    
     data_tag = soup.find("div", class_="item published")
     if data_tag:
         span = data_tag.find("span")
@@ -96,10 +96,10 @@ def extrair_detalhes_artigo(link):
     return dados
 
 def guardar_json():
-    """Exporta os dados coletados para um arquivo JSON."""
+    """Escreve os dados num arquivo JSON."""
     with open(CAMINHO_ARQUIVO, "w", encoding="utf-8") as f:
         json.dump(ARTIGOS_EXTRAIDOS, f, ensure_ascii=False, indent=2)
-    print(f"\n✅ {len(ARTIGOS_EXTRAIDOS)} artigos exportados para '{CAMINHO_ARQUIVO}'")
+    print(f"\n {len(ARTIGOS_EXTRAIDOS)} artigos exportados para '{CAMINHO_ARQUIVO}'")
 
 def principal():
     edicoes = obter_edicoes(limit=3)
